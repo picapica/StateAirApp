@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Cities View Controller - 城市-->
+        <!--Cities View Controller-->
         <scene sceneID="ahw-JC-F7B">
             <objects>
                 <tableViewController storyboardIdentifier="cities_VC" id="rs8-xh-tBd" customClass="CitiesViewController" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                             <outlet property="delegate" destination="rs8-xh-tBd" id="sN7-w1-UKs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="城市" id="MdO-qB-8ey"/>
+                    <navigationItem key="navigationItem" id="MdO-qB-8ey" userLabel="Navigation Item - 城市列表"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tu-eG-Joo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,14 +111,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="cityLabel" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XZ-6Y-Lcl">
-                                <rect key="frame" x="20" y="150" width="280" height="21"/>
+                                <rect key="frame" x="20" y="176" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="timeLabel" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bH-e2-GDp">
-                                <rect key="frame" x="20" y="179" width="280" height="21"/>
+                                <rect key="frame" x="20" y="205" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -137,13 +137,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-Ck-TPK">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="emh-8u-7HA">
+                    <navigationItem key="navigationItem" id="emh-8u-7HA" userLabel="Navigation Item - 城市">
                         <barButtonItem key="leftBarButtonItem" image="assets/menu-25.png" id="71S-Sm-eSc">
                             <connections>
                                 <action selector="cancel:" destination="pKl-UB-erV" id="ehG-IS-c2t"/>

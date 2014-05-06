@@ -20,7 +20,7 @@ Motion::Project::App.setup do |app|
 
   app.frameworks << "iAD"
 
-  app.icons = ["icons/temperature-100.png", "icons/temperature-128.png", "icons/temperature-25.png", "icons/temperature-256.png", "icons/temperature-32.png", "icons/temperature-50.png", "icons/temperature-512.png", "icons/temperature-75.png"]
+  app.icons = ["icons/StateAir-LOGO-100.png", "icons/StateAir-LOGO-1024.png", "icons/StateAir-LOGO-128.png", "icons/StateAir-LOGO-25.png", "icons/StateAir-LOGO-256.png", "icons/StateAir-LOGO-32.png", "icons/StateAir-LOGO-50.png", "icons/StateAir-LOGO-512.png", "icons/StateAir-LOGO-75.png"]
 
   app.development do
     app.provisioning_profile = "Development.mobileprovision"
