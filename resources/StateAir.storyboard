@@ -105,6 +105,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-Ck-TPK">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -116,6 +120,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="abbanner" destination="zXs-Ck-TPK" id="nEs-SF-NDp"/>
                         <outlet property="aqiLabel" destination="brG-lF-nnk" id="KKx-88-qM7"/>
                         <outlet property="cityLabel" destination="8XZ-6Y-Lcl" id="uXe-uD-C3C"/>
                         <outlet property="descLabel" destination="GDC-yT-WBA" id="UUP-qu-9JO"/>

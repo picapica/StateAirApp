@@ -18,6 +18,8 @@ Motion::Project::App.setup do |app|
   app.device_family = [:iphone]
   app.interface_orientations = [:portrait]
 
+  app.frameworks << "iAD"
+
   app.icons = ["icons/temperature-100.png", "icons/temperature-128.png", "icons/temperature-25.png", "icons/temperature-256.png", "icons/temperature-32.png", "icons/temperature-50.png", "icons/temperature-512.png", "icons/temperature-75.png"]
 
   app.development do

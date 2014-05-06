@@ -8,6 +8,7 @@ class CityViewController < UIViewController
   outlet :titleLabel, UILabel
   outlet :aqiLabel, UILabel
   outlet :descLabel, UILabel
+  outlet :abbanner, ADBannerView
 
   def viewDidLoad
     super
