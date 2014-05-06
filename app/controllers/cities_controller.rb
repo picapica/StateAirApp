@@ -6,6 +6,11 @@ class CitiesViewController < UITableViewController
     view.dataSource = view.delegate = self
 
     self.title = "cities"._
+
+    refreshControl = UIRefreshControl.new
+    refreshControl.addTarget(self, action:"pull_refresh", forControlEvents:UIControlEventValueChanged)
+
+    self.refreshControl = refreshControl
   end
 
   def tableView(tableView, numberOfRowsInSection:section)
@@ -16,7 +21,19 @@ class CitiesViewController < UITableViewController
     cell = tableView.dequeueReusableCellWithIdentifier(CELL_ID)
 
     city = @cities[indexPath.row]
-    cell.text = city.name._
+    cell.cityLabel.text = city.name._
+
+    if aqi_item = AQIItem.latest(city.name)
+      cell.aqiLabel.text = aqi_item.aqi.to_s
+      cell.descLabel.text = aqi_item.desc._
+    else
+      AQIItem.refresh(city.name) do
+        aqi_item = AQIItem.latest(city.name)
+
+        cell.aqiLabel.text = aqi_item.aqi.to_s
+        cell.descLabel.text = aqi_item.desc._
+      end
+    end
 
     cell
   end
@@ -38,4 +55,13 @@ class CitiesViewController < UITableViewController
     view.reloadData
   end
 
+  def pull_refresh
+    City.all.each do |city|
+      AQIItem.refresh(city.name) do
+        view.reloadData
+      end
+    end
+
+    self.refreshControl.endRefreshing
+  end
 end

@@ -45,7 +45,7 @@ class CityViewController < UIViewController
     end
 
     AQIItem.refresh(self.city.name) do
-      self.aqi_item = AQIItem.latest(@city.name)
+      self.aqi_item = AQIItem.latest(@city.name) if AQIItem.latest(@city.name)
       ["city", "title", "aqi", "desc"].each do |prop|
         instance_variable_get("@#{prop}Label").text = "#{self.aqi_item.send(prop)}"._
       end

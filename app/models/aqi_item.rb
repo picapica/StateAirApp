@@ -5,7 +5,7 @@ class AQIItem
   end
 
   @@all = {}
-  @@latest = {}
+  @@latest_ts = {}
 
   def initialize(hash = {})
     hash.each { |key, value|
@@ -16,7 +16,8 @@ class AQIItem
   end
 
   def self.latest(city = "beijing")
-    @@all[city][@@latest[city]]
+    return nil unless @@all[city]
+    @@all[city][@@latest_ts[city]]
   end
 
   def self.refresh(city = "beijing", &block)
@@ -29,8 +30,8 @@ class AQIItem
             unless @@all[item['city']][item['timestamp']]
               @@all[item['city']][item['timestamp']] = AQIItem.new(item)
 
-              if @@latest[item['city']].nil? or item['timestamp'] > @@latest[item['city']]
-                @@latest[item['city']] = item['timestamp']
+              if @@latest_ts[item['city']].nil? or item['timestamp'] > @@latest_ts[item['city']]
+                @@latest_ts[item['city']] = item['timestamp']
               end
             end
           end
