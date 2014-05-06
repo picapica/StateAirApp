@@ -17,3 +17,4 @@ nbproject
 .dat*.*
 *.mobileprovision
 vendor
+ib.xcodeproj
