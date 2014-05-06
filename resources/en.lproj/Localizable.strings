@@ -1,14 +1,14 @@
-"cities" = "Cities";
-"beijing" = "Beijing";
-"chengdu" = "Chengdu";
-"guangzhou" = "Guangzhou";
-"shanghai" = "Shanghai";
-"shenyang" = "Shenyang";
+"cities" = "城市";
+"beijing" = "北京";
+"chengdu" = "成都";
+"guangzhou" = "广州";
+"shanghai" = "上海";
+"shenyang" = "沈阳";
 
-"Good" = "Good.";
-"Moderate" = "Moderate.";
-"Unhealthy for Sensitive Groups" = "Unhealthy for Sensitive Groups.";
-"Unhealthy" = "Unhealthy.";
-"Very Unhealthy" = "Very Unhealthy.";
-"Hazardous" = "Hazardous.";
-"Beyond Index" = "Beyond Index.";
+"Good" = "优";
+"Moderate" = "良";
+"Unhealthy for Sensitive Groups" = "轻度污染";
+"Unhealthy" = "中度污染";
+"Very Unhealthy" = "重度污染";
+"Hazardous" = "严重污染";
+"Beyond Index" = "爆表";

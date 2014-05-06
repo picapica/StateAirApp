@@ -26,12 +26,15 @@ class CitiesViewController < UITableViewController
     if aqi_item = AQIItem.latest(city.name)
       cell.aqiLabel.text = aqi_item.aqi.to_s
       cell.descLabel.text = aqi_item.desc._
+
+      cell.levelLabel.backgroundColor = aqi_item.color2
     else
       AQIItem.refresh(city.name) do
         aqi_item = AQIItem.latest(city.name)
 
         cell.aqiLabel.text = aqi_item.aqi.to_s
         cell.descLabel.text = aqi_item.desc._
+        cell.levelLabel.backgroundColor = aqi_item.color2
       end
     end
 

@@ -15,6 +15,48 @@ class AQIItem
     }
   end
 
+  def color
+    case self.aqi_level
+    when "aqi_1"
+      UIColor.greenColor
+    when "aqi_2"
+      UIColor.yellowColor
+    when "aqi_3"
+      UIColor.orangeColor
+    when "aqi_4"
+      UIColor.redColor
+    when "aqi_5"
+      UIColor.purpleColor
+    when "aqi_6"
+      UIColor.brownColor
+    when "aqi_7"
+      UIColor.darkGrayColor
+    else
+      UIColor.blueColor
+    end
+  end
+
+  def color2
+    case self.aqi_level
+    when "aqi_1"
+      UIColor.greenColor
+    when "aqi_2"
+      UIColor.whiteColor
+    when "aqi_3"
+      UIColor.yellowColor
+    when "aqi_4"
+      UIColor.orangeColor
+    when "aqi_5"
+      UIColor.redColor
+    when "aqi_6"
+      UIColor.purpleColor
+    when "aqi_7"
+      UIColor.brownColor
+    else
+      UIColor.blueColor
+    end
+  end
+
   def self.latest(city = "beijing")
     return nil unless @@all[city]
     @@all[city][@@latest_ts[city]]

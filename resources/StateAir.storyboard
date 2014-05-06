@@ -38,12 +38,20 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.39999999999999963" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaE-3c-Ylz" userLabel="Label - Level">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="89"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="aqiLabel" destination="mHb-JD-hA9" id="7wc-4c-eCt"/>
                                     <outlet property="cityLabel" destination="CPY-EZ-FF6" id="Pqz-BD-xba"/>
                                     <outlet property="descLabel" destination="IXt-li-Hz4" id="Yj2-xE-psH"/>
+                                    <outlet property="levelLabel" destination="kaE-3c-Ylz" id="WUa-f5-4ek"/>
                                     <segue destination="elN-c8-52t" kind="modal" identifier="ShowCityAir" id="ofr-Mr-pw4"/>
                                 </connections>
                             </tableViewCell>
