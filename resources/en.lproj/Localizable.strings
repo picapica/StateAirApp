@@ -1,0 +1,14 @@
+"cities" = "Cities";
+"beijing" = "Beijing";
+"chengdu" = "Chengdu";
+"guangzhou" = "Guangzhou";
+"shanghai" = "Shanghai";
+"shenyang" = "Shenyang";
+
+"Good" = "Good.";
+"Moderate" = "Moderate.";
+"Unhealthy for Sensitive Groups" = "Unhealthy for Sensitive Groups.";
+"Unhealthy" = "Unhealthy.";
+"Very Unhealthy" = "Very Unhealthy.";
+"Hazardous" = "Hazardous.";
+"Beyond Index" = "Beyond Index.";

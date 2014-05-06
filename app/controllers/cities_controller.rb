@@ -4,6 +4,8 @@ class CitiesViewController < UITableViewController
 
   def viewDidLoad
     view.dataSource = view.delegate = self
+
+    self.title = "cities"._
   end
 
   def tableView(tableView, numberOfRowsInSection:section)
@@ -14,7 +16,7 @@ class CitiesViewController < UITableViewController
     cell = tableView.dequeueReusableCellWithIdentifier(CELL_ID)
 
     city = @cities[indexPath.row]
-    cell.text = city.name
+    cell.text = city.name._
 
     cell
   end

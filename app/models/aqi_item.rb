@@ -1,5 +1,5 @@
 class AQIItem
-  PROPERTIES = [:city, :timestamp, :title, :conc, :aqi, :desc]
+  PROPERTIES = [:city, :timestamp, :title, :conc, :aqi, :aqi_level, :desc]
   PROPERTIES.each do |prop|
     attr_accessor prop
   end

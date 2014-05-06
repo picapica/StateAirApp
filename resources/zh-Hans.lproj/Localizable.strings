@@ -1,0 +1,14 @@
+"cities" = "城市";
+"beijing" = "北京";
+"chengdu" = "成都";
+"guangzhou" = "广州";
+"shanghai" = "上海";
+"shenyang" = "沈阳";
+
+"Good" = "优";
+"Moderate" = "良";
+"Unhealthy for Sensitive Groups" = "轻度污染";
+"Unhealthy" = "中度污染";
+"Very Unhealthy" = "重度污染";
+"Hazardous" = "严重污染";
+"Beyond Index" = "爆表";

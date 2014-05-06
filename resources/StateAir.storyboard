@@ -113,14 +113,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="emh-8u-7HA">
-                        <barButtonItem key="leftBarButtonItem" title="返回" id="71S-Sm-eSc">
+                        <barButtonItem key="leftBarButtonItem" image="assets/menu-25.png" id="71S-Sm-eSc">
                             <connections>
                                 <action selector="cancel:" destination="pKl-UB-erV" id="ehG-IS-c2t"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="abbanner" destination="zXs-Ck-TPK" id="nEs-SF-NDp"/>
+                        <outlet property="adbanner" destination="zXs-Ck-TPK" id="KNc-P7-9yy"/>
                         <outlet property="aqiLabel" destination="brG-lF-nnk" id="KKx-88-qM7"/>
                         <outlet property="cityLabel" destination="8XZ-6Y-Lcl" id="uXe-uD-C3C"/>
                         <outlet property="descLabel" destination="GDC-yT-WBA" id="UUP-qu-9JO"/>
@@ -132,6 +132,9 @@
             <point key="canvasLocation" x="862" y="931"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="assets/menu-25.png" width="24" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
