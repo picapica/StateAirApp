@@ -67,6 +67,7 @@ class AQIItem
     AFMotion::JSON.get(url) do |result|
       if result and result.object
         if status = result.object['status'] and msg = result.object['msg']
+          is_refreshed = false
           result.object['data'].each do |item|
             @@all[item['city']] ||= {}
             unless @@all[item['city']][item['timestamp']]
@@ -74,11 +75,12 @@ class AQIItem
 
               if @@latest_ts[item['city']].nil? or item['timestamp'] > @@latest_ts[item['city']]
                 @@latest_ts[item['city']] = item['timestamp']
+                is_refreshed = true
               end
             end
           end
 
-          block.call
+          block.call if is_refreshed
         end
       else
       end

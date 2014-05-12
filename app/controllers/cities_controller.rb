@@ -32,7 +32,7 @@ class CitiesViewController < UITableViewController
       AQIItem.refresh(city.name) do
         aqi_item = AQIItem.latest(city.name)
 
-        cell.aqiLabel.text = aqi_item.aqi.to_s
+        cell.aqiLabel.text = aqi_item.aqi.to_s if aqi_item.aqi
         cell.descLabel.text = aqi_item.desc._
         cell.levelLabel.backgroundColor = aqi_item.color2
       end
