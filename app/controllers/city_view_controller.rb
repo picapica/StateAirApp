@@ -15,6 +15,13 @@ class CityViewController < UIViewController
 
     self.title = self.city.name._
 
+    if self.aqi_item
+      #@cityLabel.text = self.aqi_item.city._
+      @titleLabel.text = self.aqi_item.title._
+      @aqiLabel.text = self.aqi_item.aqi._
+      @descLabel.text = self.aqi_item.desc._
+    end
+
     ["city", "title", "aqi", "desc"].each do |prop|
       observe(self.aqi_item, prop) do |old_value, new_value|
         instance_variable_get("@#{prop}Label").text = "#{new_value}"._

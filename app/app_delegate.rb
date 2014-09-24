@@ -7,6 +7,7 @@ class AppDelegate
 
     @cities_VC = @cities_nav_VC.viewControllers[0]
     @cities_VC.cities = City.all
+    @cities_VC.aqi_items = []
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.makeKeyAndVisible

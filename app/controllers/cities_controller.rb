@@ -1,6 +1,6 @@
 class CitiesViewController < UITableViewController
   CELL_ID = "CITY_ITEM"
-  attr_accessor :cities
+  attr_accessor :cities, :aqi_items
 
   def viewDidLoad
     view.dataSource = view.delegate = self
@@ -24,6 +24,8 @@ class CitiesViewController < UITableViewController
     cell.cityLabel.text = city.name._
 
     if aqi_item = AQIItem.latest(city.name)
+      @aqi_items[indexPath.row] = aqi_item
+
       cell.aqiLabel.text = aqi_item.aqi.to_s
       cell.descLabel.text = aqi_item.desc._
 
@@ -31,6 +33,7 @@ class CitiesViewController < UITableViewController
     else
       AQIItem.refresh(city.name) do
         aqi_item = AQIItem.latest(city.name)
+        @aqi_items[indexPath.row] = aqi_item
 
         cell.aqiLabel.text = aqi_item.aqi.to_s if aqi_item.aqi
         cell.descLabel.text = aqi_item.desc._
@@ -50,6 +53,7 @@ class CitiesViewController < UITableViewController
       indexPath = self.tableView.indexPathForSelectedRow
       @city_VC.city = @cities[indexPath.row]
       @city_VC.editing_index = indexPath.row
+      @city_VC.aqi_item ||= @aqi_items[indexPath.row]
     end
   end
 
